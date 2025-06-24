@@ -1,22 +1,18 @@
 # a-element-inline-style
 
-a simple function for set html element inline style or remove inline style
+一个简单的为 html 原属节点设置行内样式和移除行内样式的（两）函数
 
-can use for custom style attribute
+可使用自定义 css 属性
 
-## language
-
-[English](https://github.com/lmssee/npm-a-element-inline-style/blob/main/README.md) [中文](https://github.com/lmssee/npm-a-element-inline-style/blob/main/自述文件.md)
-
-## install
+## 安装
 
 ```sh
 npm install --save a-element-inline-style
 ```
 
-## use
+## 使用
 
-set html element inline style
+设置行内样式
 
 ```ts
 import { setStyle } from 'a-element-inline-style';
@@ -27,7 +23,7 @@ setStyle(document.body, {
 });
 ```
 
-remove html element inline style
+移除行内样式
 
 ```ts
 import { removeStyle } from 'a-element-inline-style';
@@ -35,6 +31,6 @@ import { removeStyle } from 'a-element-inline-style';
 removeStyle(document.body, ['width', '--custom-width']);
 ```
 
-_Attribute names only support small humps_
+属性命名请使用*小驼峰*
 
-If you have any questions, you can directly [submit question](https://github.com/lmssee/npm-a-element-inline-style/issues/new)
+如插件出现问题或更好的建议，您可以在 [github 提交问题](https://github.com/earthnutDev/a-element-inline-style/issues/new)

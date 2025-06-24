@@ -1,11 +1,3 @@
-/****************************************************************************
- * @Author lmssee
- * @Email lmssee@outlook.com
- * @ProjectName reset-new-tab
- * @FileName element.ts
- * @CreateDate  周六  09/14/2024
- * @Description 元素的自定义
- ****************************************************************************/
 // if (Object.keys(oldStyle).length !== 0) {
 //   for (let i = 0, k = Object.keys(oldStyle), j = k.length; i < j; i++) {
 //     if (k[i].startsWith('--')) {
@@ -18,6 +10,8 @@
 //     }
 //   }
 // }
+
+import { isBusinessEmptyString, isUndefined } from 'a-type-of-js';
 
 /** # 为节点元素设置标准样式
  *
@@ -47,14 +41,14 @@ export function removeStyle(
  * 获取原有的行内样式
  ***********************/
 function getOldStyle(node: HTMLElement | HTMLInputElement) {
-  const oldStyle = (node.getAttribute('style') || '')
+  const oldStyle = (node.getAttribute('style') ?? '')
     .replace(/(;{2,})/gm, ';') // 去除多余的 `;`
     .split(';') // 按 `;` 分割为数组
     .reduce<{
       [x: string]: string | number;
     }>((previousValue, currentValue) => {
       // 使用数组方法进行累计
-      if (currentValue.trim() !== '') {
+      if (!isBusinessEmptyString(currentValue)) {
         /** 第一个被找到的下标 */
         const firstIndex = currentValue.indexOf(':');
         /** css Property 属性 */
@@ -65,7 +59,7 @@ function getOldStyle(node: HTMLElement | HTMLInputElement) {
         property = hyphenToCapitalization(property); /// 连字符转大写
         /** css property value 属性值 */
         const propertyValue = node.style[property as never];
-        if (propertyValue !== undefined)
+        if (!isUndefined(propertyValue))
           previousValue[property] = propertyValue; // 配置属性
       }
       return previousValue;
