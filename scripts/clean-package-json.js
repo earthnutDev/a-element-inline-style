@@ -23,7 +23,7 @@ packageJson = {
   },
   repository: {
     type: 'git',
-    url: 'git+https://github.com/earthnutDev/a-element-inlint-style.git',
+    url: 'git+https://github.com/earthnutDev/a-element-inline-style.git',
   },
   keywords: ['element-inline-style', 'earthnut'],
   author: {
