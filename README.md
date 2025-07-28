@@ -33,4 +33,6 @@ removeStyle(document.body, ['width', '--custom-width']);
 
 属性命名请使用*小驼峰*
 
-如插件出现问题或更好的建议，您可以在 [github 提交问题](https://github.com/earthnutDev/a-element-inline-style/issues/new)
+## 文档
+
+参见 [earthnut.dev](https://earthnut.dev/npm/a-element-inline-style)

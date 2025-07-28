@@ -31,7 +31,7 @@ packageJson = {
     email: 'earthnut.dev@outlook.com',
     url: 'https://earthnut.dev/about',
   },
-  homepage: 'https://earthnut.dev/a-element-inline-style',
+  homepage: 'https://earthnut.dev/npm/a-element-inline-style',
   bugs: {
     url: 'https://github.com/earthnutDev/a-element-inline-style/issues',
     email: 'earthnut.dev@outlook.com',
